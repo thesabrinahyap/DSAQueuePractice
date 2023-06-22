@@ -32,7 +32,27 @@ bool isEmpty (Queue q){
 bool isFull(Queue q){
 	return (q.rear +2)%MAX == q.front;
 }
-//void display(Queue q);
+void display(Queue q){
+	int ctr;
+	printf("%5s | %5s | %s\n","INDEX","VALUE","POSITION");
+	printf("========================\n");
+	for(ctr = q.front; ctr< ; ctr++){
+		printf("%5d | ", ctr);
+		if(q.elems[ctr] != EMPTY){
+			printf("%5d | ",q.elems[ctr]);
+		}else{
+			printf("%5s | ", " ");
+		}
+		if(ctr == q.front){
+				printf(" FRONT");
+		}else if(ctr == q.rear){
+				printf(" REAR");
+		}
+		printf("\n");		
+	}
+	printf("========================\n");
+}
+
 void visualize(Queue q){
 	int ctr;
 	printf("%5s | %5s | %s\n","INDEX","VALUE","POSITION");
